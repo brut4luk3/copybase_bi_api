@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Comando para rodar a aplicação
-CMD ["python", "/app/api/copybase_bi_api.py"]
+CMD ["python", "/app/api/app.py"]
