@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
 from io import BytesIO
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -56,4 +57,5 @@ def upload_file():
     return "Houve um erro sistêmico, tente novamente!", 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
